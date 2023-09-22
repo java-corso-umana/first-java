@@ -6,6 +6,10 @@ abstract class Vehicle {
     private String model;
     private String color;
 
+    public Vehicle(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -29,9 +33,9 @@ abstract class Vehicle {
 
     @Override
     public String toString() {
-        return "\nNOME: " + this.name + "\n" +
-                "MODELLO: " + this.model + "\n" +
-                "COLORE: " + this.color + "\n";
+        return "\nNOME: " + this.name + "\n"; 
+                // this.model != null ? ("MODELLO: " + this.model + "\n") : "";
+                // "COLORE: " + this.color + "\n";
     }
 
 

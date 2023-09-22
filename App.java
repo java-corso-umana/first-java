@@ -11,13 +11,16 @@ class App {
 
         System.out.print("Seleziona il tipo di veicolo: C per car, M per moto: ");
         String option = sc.nextLine();
+        System.out.print("NOME VEICOLO: ");
+        String name = sc.nextLine();
         if(option.equals("C")){
-            x = new Car();
+            System.out.print("TARGA: ");
+            String plate = sc.nextLine();
+            x = new Car(name, plate);
         }
         else {
             x = new Motorcycle();
         }
-        x.fillInfo();
         System.out.print(x);
         // x.fillInfo();
 
