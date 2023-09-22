@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 abstract class Vehicle {
 
@@ -14,4 +15,24 @@ abstract class Vehicle {
 
     public abstract void startEngine();
     // getters and setters ... 
+
+    // Chiede le info all'utente riguardo gli attributi specifici e li salva nelle variabili
+    public void fillInfo() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("NOME: ");
+        this.name = sc.nextLine();
+        System.out.print("MODELLO: ");
+        this.model = sc.nextLine();
+        System.out.print("COLORE: ");
+        this.color = sc.nextLine();
+    }
+
+    @Override
+    public String toString() {
+        return "\nNOME: " + this.name + "\n" +
+                "MODELLO: " + this.model + "\n" +
+                "COLORE: " + this.color + "\n";
+    }
+
+
 }
